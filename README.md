@@ -7,11 +7,11 @@ DATA
 
 - On récupère les data sur le dataset de Google
 
-    -Contraintes 
+    - Contraintes 
         Les données sont rangés dans un tensorflow.SequenceExample 
         on a le son enrigistré sous la forme 128 8bit quantized à l'aide de VGGish
 
-    -Conséquences
+    - Conséquences
         Soit je récupère les données sous format tensorflow et j'utilise tensorflow
         pour construire le réseau de neurones
 
