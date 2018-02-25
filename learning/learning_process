@@ -5,14 +5,11 @@ bytes_list             label
 b1,b2,...,b10           56
 
 PREPARATION DES DONNEES : 
-On tranforme le dataset en 2D pour le CNN2D
-bytes                  label
-b1+bn                   56
+x1, x2, xn,        y
+b1  b2  bn,       56
 
-On utilise un Réseau de neurones convolutionnel, multiclassification
 
 Architecture du réseau :
-
 
 Entrainé sur quelle machine ?
 
