@@ -2,12 +2,14 @@
 AUDIODATASET : 
 
 bytes_list             label
-b1,b2,...,b10           56
+b1,b2,...,b10           56,44
 
 PREPARATION DES DONNEES : 
 x1, x2, xn,        y
-b1  b2  bn,       56
+b1  b2  bn,       56,44
 
+On peut prédir plusieurs labels en utilisant binary crossentropy 
+see this link : https://www.depends-on-the-definition.com/classifying-genres-of-movies-by-looking-at-the-poster-a-neural-approach/
 
 Architecture du réseau :
 
