@@ -6,11 +6,13 @@ my_readed_example = [tf.train.SequenceExample().FromString(seq_example_str)
         for seq_example_str in reader]
 
 y = list() #
-x = list()
-for item in my_readed_example:
-    # get the label(s)
-    y.append(item.context.feature['labels'].int64_list.value)
-    # get the bytes 0 1 2 3 4 5 6 7 8 9 
-    list_of_x = item.feature_lists.feature_list['audio_embedding'].feature
-    for _x in list_of_x:
-        _x.bytes_list.value
+x = list() #
+# on prends que le premier seq_example
+item = my_readed_example[0]
+y = item.context.feature['labels'].int64_list.value
+list_of_x = item.feature_lists.feature_list['audio_embedding'].feature
+# on prends que la premiere seconde
+x0 = list_of_x[4]
+string =  str(x0.bytes_list.value)
+bytes_128 = string.split('\\')
+print len(bytes_128)

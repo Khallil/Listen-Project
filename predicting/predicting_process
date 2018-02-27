@@ -6,3 +6,7 @@ Il faudrait essayer d'avoir un top 5 de retour avec
 les pourcentage de chacunes des classes dans le top
 
 On cherche dans le CSV qu'est ce que 311
+
+VGGish est disponible dans tensorflow/models/research/model
+avec un checkpoint pour permettre des fichiers audio enregistré ailleurs 
+et les convertir grâce a VGGish

@@ -1,18 +1,20 @@
 
 AUDIODATASET : 
+Frame-level features
 
-bytes_list             label
-b1,b2,...,b10           56,44
-
-PREPARATION DES DONNEES : 
+# PREPARATION DES DONNEES : 
 x1, x2, xn,        y
 b1  b2  bn,       56,44
 
-On peut prédir plusieurs labels en utilisant binary crossentropy 
+# Voilà à quoi ressemble une seconde d'un son
+['o\x8aN\x00\xf3\\\x8ec_\x9b\xc1\x1b"\xbe\x8d\x93\x00_\x8ao\x93\x80S\x1ap\xc7\xa1\xech\x86\x8c\x92\x98xsd\xb7%\x9e@\x80jO\xb3u\xff\xaa*\x9d\x96\xaa\xb8\xc1E\x9eO\xa0<|\x93~Rj\xf5\x87\x8d\xa7\\\x1f\xb9\x7f\xda\xff\xbf82\x93\xbb\\\x7f*\x92h9:\x00\x8epk\xcb\x84q}\x97\x8a\x00i\xb2+?\x00>A\x7f\xb8\xb8\x87\x95\x86m\x9e1\x00U\x91n9\xae\xd8\xeb\x9eB\xfe\x89U\x8agd']
+Description, et comment l'utiliser ? :
+    - 128 dimensions car 128 8bits (1bytes)
+    - Il sagit d'une frame
+
+# Frame-level model que je peux copier
+Audio Input ->  LSTM -> Output -> FrameLevelLogisticModel
+voir frame_level_models.py pour comprendre le machin
+
+# Gestion de plusieurs labels en utilisant binary crossentropy 
 see this link : https://www.depends-on-the-definition.com/classifying-genres-of-movies-by-looking-at-the-poster-a-neural-approach/
-
-Architecture du réseau :
-
-Entrainé sur quelle machine ?
-
-Accuracy obtenu     Architecture    Machine    Durée 
